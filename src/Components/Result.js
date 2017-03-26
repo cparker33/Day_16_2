@@ -9,7 +9,9 @@ export default React.createClass({
     return {
       displaytype: 'all',
       tasklist: [],
-      taskCnt: 0
+      taskCnt: 0,
+      activeCnt: 0,
+      totalCnt: 0
 
     }
 
@@ -18,6 +20,7 @@ export default React.createClass({
   handleCheck: function (c) {
 
     var newArr = []
+    var newAct = 0
 
     this.state.tasklist.forEach((task) => {
 
@@ -31,12 +34,19 @@ export default React.createClass({
 
       } 
 
+      if (task.complete === false) {
+
+        newAct += 1
+
+      }
+
       newArr.push(task)
     })
 
     this.setState({
 
-      tasklist: newArr
+      tasklist: newArr,
+      activeCnt: newAct
 
     })    
 
@@ -78,7 +88,8 @@ export default React.createClass({
     this.setState({
 
       tasklist: [...this.state.tasklist, newTask],
-      taskCnt: this.state.taskCnt + 1
+      taskCnt: this.state.taskCnt + 1,
+      activeCnt: this.state.activeCnt + 1
 
     })
     
@@ -96,18 +107,49 @@ export default React.createClass({
 
         {
           
-            this.state.tasklist.map((task, index) =>  {
+          this.state.tasklist.map((task, index) =>  {
 
-              return <Task 
-                      key={index} 
-                      task={task} 
-                      checkClick={this.handleCheck} 
-                      removeClick={this.handleRemove}
-                    />
+            return <Task 
+                    key={index} 
+                    task={task} 
+                    checkClick={this.handleCheck} 
+                    removeClick={this.handleRemove}
+                   />
               
             })
         }
         
+
+
+
+<div 
+  id={this.state.activeCnt > 0 ? 'cFooter' : 'cFooterHidden'}
+>
+  
+  <div 
+    id="cTaskCount">{this.state.activeCnt} {this.state.activeCnt === 1 ? 'task' : 'tasks'} pending</div>
+
+    <div 
+      id="cFiltBtnCont"
+    >
+  
+      <div>All</div>
+      <div>Active</div>
+      <div>Complete</div>
+    </div>
+
+    <div 
+      id="cClear"
+    >Clear Completed
+    </div>
+
+        
+
+  </div>
+
+
+
+
 
       </div>
 

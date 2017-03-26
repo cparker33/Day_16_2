@@ -6,6 +6,7 @@ li {
   list-style: none;
   background-color: #F7F7F7;
   height: 50px;
+  width: 435px;
   border-bottom: 1px solid #CCC;
 }
 
@@ -45,7 +46,7 @@ input[type=checkbox] {
     padding-right:5px;
     border-radius:15px;
     border: 2px solid #CCC;
-    background-color:#EEE;
+    background-color:#000;
     color:#FFF;
     white-space: nowrap;
     overflow:hidden;
