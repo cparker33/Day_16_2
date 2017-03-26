@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+li {
+
+  list-style: none;
+  background-color: #F7F7F7;
+  height: 50px;
+  border-bottom: 1px solid #CCC;
+}
+
+label {
+
+  margin-left: 20px;
+  line-height: 50px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.Active {
+
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+}
+
+.Complete {
+
+  text-decoration: line-through;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  color: #CCC;
+}
+
+.cCheckBox {
+
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+
+}
+
+
+input[type=checkbox] {
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:15px;
+    border: 2px solid #CCC;
+    background-color:#EEE;
+    color:#FFF;
+    white-space: nowrap;
+    overflow:hidden;
+    outline: hidden;
+    width:15px;
+    height:15px;
+}
+
+input[type=checkbox]:checked {
+    background-color:#25AD18;
+    outline: hidden;
+}
+
+input[type=checkbox]:hover {
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.cRemoveBtn {
+
+  border: 1px solid #CCC;
+  color: #CCC;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  float: right;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.cRemoveBtn:hover {
+
+  cursor: pointer;
+  border: 1px solid #555;
+  color: #555;
+}
