@@ -41,6 +41,12 @@ font-size: 12px;
 text-align: center;
 }
 
+#cClear:hover {
+
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 #cTaskCount {
 
   width: 120px;
@@ -48,4 +54,24 @@ text-align: center;
   text-align: center;
 }
 
+.cSelected {
+
+  border: 1px solid #555;
+}
+
+.cNotSelected {
+
+}
+
+.cSelected:hover { 
+
+  border: 1px solid #555;
+}
+
+
+
+.cNotSelected:hover {
+
+  cursor: pointer; 
+}
 
